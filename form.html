@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVK House</title>
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <style>
+        .flex-container {
+            display: flex;
+        }
+        .flex-container > div {
+            margin: 10px;
+            padding: 15px;
+            font-size: 25px; 
+        }
+        .tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tab > div {
+            margin: 10px;
+            padding: 15px;
+            font-size: 20px; 
+        }
+        footer{
+            text-align: center;
+            padding: 3px;
+            background-color: rgb(7, 23, 95);
+            color: white;
+        }
+        .social-footer {
+            display: flex;
+            justify-content: center;
+        }
+        .social-footer > li {
+            margin: 5px;
+            padding: 10px;
+        }
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <header>
+            <div class="flex-container">
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="NVK Logo" width="300">
+                </a>
+                <div><a href="index.html" style="color: rgb(0,179,240);"><strong>Home</strong></a></div>
+                <div><a href="index.html#men-products" style="color: rgb(0,179,240);"><strong>Product</strong></a></div>
+                <div><a href="#men-form" style="color: rgb(0,179,240);"><strong>Buy Now!</strong></a></div>    
+                <div><a href="#location" style="color: rgb(0,179,240);"><strong>Location</strong></a></div>
+                <div><a href="" style="color: rgb(0,179,240);"><strong>Blog</strong></a></div>
+            </div>
+        </header>
+        <br>
+        <section>
+            <img src="https://im.uniqlo.com/global-cms/spa/res98728c326af05c040bd551d3af2bbaadfr.jpg" width="100%" alt="Banner">
+        </section>
+        <br>
+        <main>
+            <hr>
+            <section>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <center>
+                                        <h3>Men's Top</h3>
+                                    </center>                                   
+                                </div>
+                                <div>
+                                    <img src="/images/men-top-size.png" alt="men-top-size" width="550">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <center>
+                                        <h3>Men's Pants</h3>
+                                    </center>                                   
+                                </div>
+                                <div>
+                                    <img src="/images/men-pants-size.png" alt="men-pants-size" width="550">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section style="width: 500px;" id="men-form">
+                <h2>Order Products Form</h2>
+                <form action="form-processing.php" method="POST">
+                    <fieldset>
+                        <legend>Enter your personal information</legend>
+                        <label for="fname">First Name: </label>
+                        <input type="text" id="fname" name="fname" required>
+                        <br>
+                        <br>
+                        <label for="lname">Last Name: </label>
+                        <input type="text" id="lname" name="lname" required>
+                        <br>
+                        <br>
+                        <label for="dob">Date of Birth: </label>
+                        <input type="date" id="dob" name="dob" required>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Enter your shipping information</legend>
+                        <label for="address">Address: </label>
+                        <input type="text" id="address" name="address" required>
+                        <br>
+                        <br>
+                        <label for="district">District: </label>
+                        <select name="district" id="district" required>
+                            <option value="">Select a district</option>
+                            <option value="1">District 1</option>
+                            <option value="2">District 2</option>
+                            <option value="3">District 3</option>
+                        </select>
+                        <br>
+                        <br>
+                        <label for="city">City: </label>
+                        <select name="city" id="city" required>
+                            <option value="">Select a city</option>
+                            <option value="hcm">HCM City</option>
+                            <option value="dn">Da Nang</option>
+                            <option value="hn">Ha Noi</option>
+                            <option value="ha">Hoi An</option>
+                        </select>
+                        <br>
+                        <br>
+                        <label for="postcode">Postcode: </label>
+                        <input type="number" id="postcode" name="postcode" required>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Purchase Options</legend>  
+                        <label for="products">Select product(s): </label>
+                        <select name="products" id="products" multiple>
+                            <option value="men-shirt">Men Shirt</option>
+                            <option value="men-jacket">Men Jacket</option>
+                            <option value="men-long-sleeve">Men Long Sleeve</option>
+                            <option value="men-polo">Men Polo</option>
+                            <option value="men-pants">Men Smart Pants</option>
+                            <option value="men-shorts">Men Shorts</option>
+                            <option value="card-holder">Card Holder</option>
+                            <option value="men-case">Men Case</option>
+                            <option value="clutch">Clutch</option>
+                        </select>
+                        <br>
+                        <br>                                             
+                        <input type="radio" name="size" id="xs" value ="XS">
+                        <label for="xs">XS</label>
+                        <input type="radio" name="size" id="s" value ="S">
+                        <label for="s">S</label>
+                        <input type="radio" name="size" id="l" value ="L">
+                        <label for="l">L</label>
+                        <input type="radio" name="size" id="xl" value ="XL">
+                        <label for="xl">XL</label>
+                        <input type="radio" name="size" id="xxl" value ="XXL">
+                        <label for="xxl">XXL</label>
+                        <input type="radio" name="size" id="m" value ="M">
+                        <label for="m">M</label>
+                        <br>
+                        <br>
+                        <label for="quantiy">Quantiy: </label>
+                        <input type="number" id="quantiy" name="quantiy" value="1" min="0">
+                        <br>
+                        <br>
+                        <label for="note">Note: </label>
+                        <textarea name="note" id="note" cols="30" rows="3"></textarea>
+                    </fieldset>
+                    <br>
+                    <input type="submit" value="Buy Now!" style="background-color: red; font-size: xx-large;">
+                </form>
+            </section>
+            <hr>
+            <section id="location">
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.559587457052!2d108.33833657552523!3d15.879728168336388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31420d94eda04bf7%3A0xee010143eee848dd!2zUGjhu5UgY-G7lSBI4buZaSBBbg!5e0!3m2!1svi!2s!4v1678954273015!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <iframe width="400" height="250" src="https://www.youtube.com/embed/DdFnz8j9trQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
+                        </td>
+                        <td>
+                            <div style="padding-left: 100px;">
+                                <img src="/images/logo-removebg-preview.png" alt="Brand Logo" width="300">
+                                <p><a href="" style="color: white;">Help & FAQ  |  </a><a href="" style="color: white;">Privacy Policy  |  </a><a href="" style="color: white;">Terms of Service</a></p>
+                                <h4>© Copyright 2023 by Khai Nguyen @ RMIT Vietnam | Made with ❤️</h4>
+                            </div>
+                        </td>                                             
+                        <td>
+                            <ul class="social-footer">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <img src="/images/facebook.png" alt="facebook icon" width="50">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <img src="/images/instagram.png" alt="instagram icon" width="50">
+                                    </a> 
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/" target="_blank">
+                                        <img src="/images/youtube.png" alt="youtube icon" width="50">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto: nvkhai105@gmail.com">
+                                        <img src="/images/mail.png" alt="mail icon" width="50">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/" target="_blank">
+                                        <img src="/images/twitter.png" alt="twitter icon" width="50">
+                                    </a>
+                                </li>                                
+                            </ul>    
+                        </td>                                    
+                    </tr>
+                </tbody>
+            </table>
+        </footer>
+    </center>
+</body>
+</html> 
